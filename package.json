@@ -16,5 +16,11 @@
   ],
   "author": {
     "name": "jsyczhanghao@sina.com"
-  }
+  },
+  "dependencies": {
+    "uglifyjs": "^2.3.6",
+    "clean-css": "^2.2.7",
+    "fis-optimizer-uglify-js": "^0.1.2",
+    "fis-optimizer-clean-css": "0.0.12"
+  },
 }
