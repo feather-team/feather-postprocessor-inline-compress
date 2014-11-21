@@ -1,0 +1,20 @@
+{
+  "name": "feather-postprocessor-inline-compress",
+  "version": "0.1.0",
+  "description": "feather inline compress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feather-ui/feather-postprocessor-inline-compress.git"
+  },
+  "keywords": [
+    "feather",
+    "inline compress"
+  ],
+  "author": {
+    "name": "jsyczhanghao@sina.com"
+  }
+}
