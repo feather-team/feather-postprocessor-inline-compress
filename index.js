@@ -1,7 +1,7 @@
 'use strict';
 
-var INLINE_COMPRESS_REG = /(<(script|style)[\s\S]+?)\bfeather-inline-compress\b([\s\S]*?>)([\s\S]*?)<\/\2>/g;
-var ug = require('fis-optimizer-uglify-js'), clean = require('fis-optimizer-clean-css');
+var INLINE_COMPRESS_REG = /(<(script|style)[\s\S]+?)\b(?:feather|data)-inline-compress\b([\s\S]*?>)([\s\S]*?)<\/\2>/g;
+var ug = require('uglify-js'), clean = require('clean-css');
 
 module.exports = function (content, file, conf){
     if(file.isHtmlLike){
@@ -9,9 +9,9 @@ module.exports = function (content, file, conf){
 
         content = content.replace(INLINE_COMPRESS_REG, function(_0, _1, _2, _3, _4){
             if(_2 == 'script'){
-                _4 = ug(_4, file, {});
+                _4 = ug.minify(content, {fromString: true}).code;
             }else{
-                _4 = clean(_4, file, {});
+                _4 = clean.process(_4, {processImport: false});
             }
 
             return _1 + _3 + _4 + '</' + _2 + '>';

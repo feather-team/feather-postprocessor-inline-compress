@@ -1,6 +1,6 @@
 {
   "name": "feather-postprocessor-inline-compress",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "feather inline compress",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "name": "jsyczhanghao@sina.com"
   },
   "dependencies": {
-    "fis-optimizer-uglify-js": "^0.1.2",
-    "fis-optimizer-clean-css": "0.0.12"
+    "uglify-js": "2.4.15",
+    "clean-css": "1.1.7"
   }
 }
